@@ -1,2 +1,2 @@
 # RateTheMovie
-A fullstack project  
+A fullstack project for my web development courses
