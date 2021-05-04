@@ -7,6 +7,7 @@ import { Movies } from './components/Movies';
 import { Profile } from './components/Profile';
 
 import './custom.css'
+import './index.css';
 
 export default class App extends Component {
   static displayName = App.name;
