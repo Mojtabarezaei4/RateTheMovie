@@ -2,9 +2,12 @@ import React from 'react'
 
 import './Card.css'
 
-function Card({title,imageUrl,body}) {
+function Card({icon,title,imageUrl,body}) {
     return (
         <div className="card-container">
+            <div className="card-icon">
+                <img src={icon} alt=""/>
+            </div>
             <div className="card-title">
                 <h3>{title}</h3>
             </div>
