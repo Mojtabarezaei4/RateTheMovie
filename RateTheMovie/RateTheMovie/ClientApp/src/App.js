@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { Friends } from './components/Friends';
-import { Movies } from './components/Movies';
-import { Profile } from './components/Profile';
+import { Home } from './components/home/Home';
+import { Friends } from './components/friends/Friends';
+import { Movies } from './components/movies/Movies';
+import { Profile } from './components/profile/Profile';
 
 import './custom.css'
 import './index.css';

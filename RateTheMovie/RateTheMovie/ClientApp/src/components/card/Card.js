@@ -1,12 +1,11 @@
 import React from 'react'
 
-import StarRating from "./StarRating"
-import Like from './Like'
+import StarRating from "../starRating/StarRating"
+import Like from '../like/Like'
 
 import './Card.css'
 
-
-function Card({icon,userName,movieName,imageUrl,body}) {
+export default function Card({icon,userName,movieName,imageUrl,description}) {
     return (
         <div className="card-container">
             <div className="card-icon">
@@ -15,17 +14,15 @@ function Card({icon,userName,movieName,imageUrl,body}) {
             <div className="userName">
                 <h4>{userName}</h4>
             </div>
-            <div className="card-starRating">
-                <StarRating />
-            </div>
-            <div className="movieName">
+            <div className="movieName card-starRating">
                 <h1>{movieName}</h1>
+                <StarRating />
             </div>
             <div className="image-container">
                 <img src={imageUrl} alt=''/>
             </div>
-            <div className="card-body">
-                <p>{body}</p>
+            <div className="card-description">
+                <p>{description}</p>
             </div>
             <div className="like-disLike">
                 <Like />
@@ -34,4 +31,3 @@ function Card({icon,userName,movieName,imageUrl,body}) {
     )
 }
 
-export default Card
