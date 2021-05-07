@@ -1,6 +1,7 @@
 import React from 'react'
 
-import StarRating from "./StarRating";
+import StarRating from "./StarRating"
+import Like from './Like'
 
 import './Card.css'
 
@@ -15,7 +16,7 @@ function Card({icon,userName,movieName,imageUrl,body}) {
                 <h4>{userName}</h4>
             </div>
             <div className="card-starRating">
-                <StarRating size={100}/>
+                <StarRating />
             </div>
             <div className="movieName">
                 <h1>{movieName}</h1>
@@ -25,6 +26,9 @@ function Card({icon,userName,movieName,imageUrl,body}) {
             </div>
             <div className="card-body">
                 <p>{body}</p>
+            </div>
+            <div className="like-disLike">
+                <Like />
             </div>
         </div>
     )

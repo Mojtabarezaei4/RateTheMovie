@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser } from "@fortawesome/free-solid-svg-icons"
 
 import Card from "./Card"
-import Like from './Like';
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -13,7 +12,7 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Home <Like size={100}/> </h1>
+        <h1>Home</h1>
 
         <Card
         icon = '/images/userAvatar.png'

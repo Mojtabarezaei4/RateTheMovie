@@ -1,3 +1,25 @@
+.like-dislike {
+    position: relative;
+    display: flex;
+    margin-left: 1rem;
+    height: 40px;
+}
+
 .like {
+    margin-right: 1rem;
     cursor: pointer;
+    color: rgb(20, 207, 224);
+}
+
+.like p {
+    margin-right: 0.5rem;
+}
+
+.dis-like {
+    cursor: pointer;
+    color: rgb(224, 20, 98);
+}
+
+.dis-like p {
+    margin-right: 0.5rem;
 }

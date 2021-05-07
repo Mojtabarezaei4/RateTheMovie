@@ -53,3 +53,9 @@ p {
     margin-left: 1rem;
     margin-top: 6rem;
 }
+
+.like-disLike {
+    position: relative;
+    padding-top: 1rem;
+
+}
