@@ -12,11 +12,12 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Home <StarRating size={100}/> </h1>
+        <h1>Home</h1>
 
         <Card
         icon = '/images/userAvatar.png'
-        title='Card title'
+        userName='The User'
+        movieName= 'Pulp Fiction'
         imageUrl='/images/pulpFictionCover.jpg'
         body='Lorem ipsum'
         />

@@ -5,13 +5,17 @@
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
     margin-top: 0.5rem;
+    border-radius: 20px;
 }
 
 .image-container img {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    width: 300px;
     margin: auto;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 h3,
@@ -29,8 +33,23 @@ p {
     border-radius: 50% 50%;
 }
 
-.card-title {
+.userName {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    float: left;
+    color: rgb(80, 80, 80);
+}
 
+.card-starRating {
+    position: absolute;
+    right: 0;
+    margin-right: 1.3rem;
+    margin-top: 1.3rem;
+}
+
+.movieName {
+    position: relative;
+    left: 0;
+    margin-left: 1rem;
+    margin-top: 6rem;
 }
