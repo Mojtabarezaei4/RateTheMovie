@@ -4,6 +4,10 @@
   word-break: break-all;
 }
 
+.borderBottom {
+  border-bottom: 2px solid rgb(97, 97, 97);
+}
+
 .fontBig {
   font-size: 20px;
 }
@@ -13,7 +17,7 @@ html {
 }
 
 #nav-link {
-  color: rgb(119, 119, 119);
+  color: rgb(211, 211, 211);
 }
 
 @media (min-width: 768px) {

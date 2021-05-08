@@ -16,7 +16,7 @@ export class Home extends Component {
           userName='The User'
           movieName= 'Pulp Fiction'
           imageUrl='/images/pulpFictionCover.jpg'
-          description='Lorem ipsum används ofta som exempeltext inom trycksaksframställning och grafisk design för att visa hur till exempel ett dokument kommer att se ut när väl den riktiga texten är på plats.'
+          description='Pulp Fiction är en amerikansk gangsterfilm från 1994, regisserad och skriven av Quentin Tarantino. Pulp Fiction var Tarantinos andra riktiga film efter hans debutfilm Reservoir Dogs. Filmen rankas som en av de 10 bästa filmerna någonsin på den populära appen och hemsidan IMDB.'
           />
         </div>
         <div className="card">
@@ -25,7 +25,7 @@ export class Home extends Component {
           userName='The User'
           movieName= 'Pulp Fiction'
           imageUrl='/images/pulpFictionCover.jpg'
-          description='Lorem ipsum'
+          description='Lorem ipsum används ofta som exempeltext inom trycksaksframställning och grafisk design för att visa hur till exempel ett dokument kommer att se ut när väl den riktiga texten är på plats.'
           />
         </div>
       </>

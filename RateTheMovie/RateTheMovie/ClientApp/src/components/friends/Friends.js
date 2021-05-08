@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 
+import FriendsCard from '../card/FriendsCard'
+
 export class Friends extends Component {
   static displayName = Friends.name;
 
   render () {
     return (
       <div>
-        <h1>Profile</h1>
+
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Amanediel"
+        addIcon="/images/addFriend.png"
+        />
+
+        
         
       </div>
     );
