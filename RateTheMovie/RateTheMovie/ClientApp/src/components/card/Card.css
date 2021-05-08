@@ -13,7 +13,8 @@
 
 .friend {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .image-container img {
@@ -36,6 +37,7 @@ p {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 35px;
     float: left;
     border-radius: 50% 50%;
@@ -87,7 +89,7 @@ p {
 .addIcon-container {
     position: relative;
     margin-top: 1.3rem;
-    right: -65%;
+    right: 5%;
 }
 
 .add-icon {

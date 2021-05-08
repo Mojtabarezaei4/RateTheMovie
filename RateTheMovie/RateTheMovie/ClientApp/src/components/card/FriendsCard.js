@@ -23,12 +23,10 @@ export default function FriendsCard({icon,userName,addIcon}) {
         }
     }
     return (
-        <div className="card-container friend">
-            <div className="card-icon">
+        <div className="card-container friend ">
+            <div className="card-icon d-flex">
                 <img src={icon} alt=""/>
-            </div>
-            <div className="userName">
-                <h4>{userName}</h4>
+                <h4 className="userName">{userName}</h4>
             </div>
             <div className="addIcon-container">
                 <img src={addIcon} 
@@ -36,7 +34,6 @@ export default function FriendsCard({icon,userName,addIcon}) {
                 className="add-icon"
                 onClick={
                     ()=> addBtn()
-                    
                 }
                 />
             </div>

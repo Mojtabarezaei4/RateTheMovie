@@ -8,15 +8,51 @@ export class Friends extends Component {
   render () {
     return (
       <div>
-
         <FriendsCard
         icon="/images/userAvatar.png"
         userName="Amanediel"
         addIcon="/images/addFriend.png"
         />
-
-        
-        
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Michell"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Jack"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Amanediel"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Michell"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Jack"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Amanediel"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Michell"
+        addIcon="/images/addFriend.png"
+        />
+        <FriendsCard
+        icon="/images/userAvatar.png"
+        userName="Jack"
+        addIcon="/images/addFriend.png"
+        />
       </div>
     );
   }
