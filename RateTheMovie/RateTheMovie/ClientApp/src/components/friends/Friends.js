@@ -7,7 +7,7 @@ export class Friends extends Component {
 
   render () {
     return (
-      <div>
+      <div className="card">
         <FriendsCard
         icon="/images/userAvatar.png"
         userName="Amanediel"

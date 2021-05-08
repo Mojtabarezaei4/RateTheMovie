@@ -1,5 +1,9 @@
+body {
+    background: linear-gradient(135deg, rgba(49, 49, 50, 1) 0%, rgba(22, 22, 24, 1) 100%);
+
+}
+
 #root {
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(49, 49, 50, 1) 0%, rgba(22, 22, 24, 1) 100%);
     cursor: wait;
 }
