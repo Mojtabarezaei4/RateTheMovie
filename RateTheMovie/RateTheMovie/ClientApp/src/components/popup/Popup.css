@@ -35,10 +35,20 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-.popup-inner .ok-btn {
+.ok-btn {
     position: relative;
     display: flex;
+    justify-content: center;
+    align-content: center;
     margin: auto;
     top: 1rem;
-    right: 1rem;
+    width: 60px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.ok-btn:focus {
+    outline: none;
 }
