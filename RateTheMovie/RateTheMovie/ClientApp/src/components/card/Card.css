@@ -108,21 +108,30 @@ p {
     margin-top: 1rem;
 }
 
-.movie input {
+.description {
     position: relative;
     width: 50%;
     font-size: 18px;
     height: 100px;
-    align-items: center;
     margin-bottom: 1rem;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
+    transition: .2s;
+    text-overflow: ellipsis;
+
+
 }
 
 .movie input:focus {
     outline: none;
     box-shadow: 0px 0px 15px -5px;
+}
+
+.description::placeholder {
+    top: 0;
+    margin-top: -12rem;
+    text-align: start;
 }
 
 .movie button {

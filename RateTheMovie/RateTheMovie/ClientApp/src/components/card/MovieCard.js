@@ -7,8 +7,9 @@ import './Card.css'
 export default function MovieCard({movieName,imageUrl}) {
 
 
-    function post(){
-        return ""
+    function post(description){
+        //send the description, name and image of the movie to the database 
+        
     }
     return (
         <div className="card-container" >
@@ -23,6 +24,7 @@ export default function MovieCard({movieName,imageUrl}) {
                 <form className="movie" action="/movies">
                     <input 
                     type="text"
+                    className="description"
                     placeholder="Any comments on the movie? (optional)"
                     name="description"
                     autoComplete="off"
@@ -30,7 +32,7 @@ export default function MovieCard({movieName,imageUrl}) {
                     <button 
                     type="submit" 
                     onClick={
-                    post()
+                        post("body.description")
                     }>
                     Post</button>
                 </form>
