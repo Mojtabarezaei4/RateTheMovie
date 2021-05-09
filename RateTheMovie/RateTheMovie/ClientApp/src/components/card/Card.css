@@ -119,18 +119,17 @@ p {
     border-radius: 20px;
     transition: .2s;
     text-overflow: ellipsis;
-
-
 }
 
-.movie input:focus {
+.movie input:focus,
+.profile-form input:focus {
     outline: none;
     box-shadow: 0px 0px 15px -5px;
 }
 
-.description::placeholder {
+.description::placeholder,
+.profile-form::placeholder {
     top: 0;
-    margin-top: -12rem;
     text-align: start;
 }
 
@@ -145,5 +144,74 @@ p {
 }
 
 .movie button:focus {
+    outline: none;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.left-side {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.profile-form input {
+    margin-top: 1rem;
+    height: 40px;
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    transition: .2s;
+    text-overflow: ellipsis;
+    padding-left: 1rem;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-icon {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 70px;
+    float: left;
+    border-radius: 50% 50%;
+}
+
+.right-side button {
+    height: 40px;
+    width: 100%;
+    align-content: center;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    font-size: 20px;
+}
+
+.right-side button:focus {
     outline: none;
 }

@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import ProfileCard from '../card/ProfileCard';
+
+import "./Profile.css"
 
 export class Profile extends Component {
   static displayName = Profile.name;
 
   render () {
     return (
-      <div>
-        <h1>Profile</h1>
-        
+      <div  className="profile-container">
+        <ProfileCard 
+          userName="Amanediel"
+          userEmail="Amanediel@gmail.com"
+          icon="/images/userAvatar.png"
+        />
       </div>
     );
   }
