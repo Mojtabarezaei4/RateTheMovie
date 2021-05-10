@@ -4,6 +4,7 @@ import StarRating from "../starRating/StarRating"
 import Like from '../like/Like'
 
 import './Card.css'
+import './ResponsiveCard.css'
 
 export default function Card({icon,userName,movieName,imageUrl,description}) {
     return (
