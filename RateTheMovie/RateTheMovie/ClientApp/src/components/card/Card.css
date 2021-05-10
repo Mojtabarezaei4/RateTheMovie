@@ -256,7 +256,6 @@ p {
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.8);
     padding-left: 1rem;
-
 }
 
 .loging-form input {
@@ -269,7 +268,6 @@ p {
     transition: .2s;
     text-overflow: ellipsis;
     padding-left: 1rem;
-
 }
 
 .loging-form input:focus {
@@ -332,7 +330,6 @@ p {
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.8);
     padding-left: 1rem;
-
 }
 
 .register-form input {

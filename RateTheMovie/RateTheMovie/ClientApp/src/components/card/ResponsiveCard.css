@@ -1,38 +1,11 @@
 @media only screen and (max-width: 540px) {
-    .friend {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 2rem;
-    }
-
-    .image-container img {
-        position: relative;
-        overflow: hidden;
-        width: 20vw;
-        margin: auto;
-        margin-top: 1rem;
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-
     .card-icon img {
         width: 25px;
     }
 
-    .card-starRating {
-        right: 0;
-        margin-right: 1.3rem;
-        margin-top: 1.3rem;
-    }
-
     .movieName {
-        position: relative;
-        display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 1rem;
-        margin-top: 2rem;
-        color: rgb(211, 211, 211);
         font-size: 12px;
     }
 
@@ -43,36 +16,13 @@
     .card-description {
         font-size: 14px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .like-disLike {
-        position: relative;
-        bottom: 1rem;
-
-    }
-
-    .addIcon-container {
-        position: relative;
-        margin-top: 1.3rem;
-        right: 5%;
-    }
-
-    .add-icon {
-        cursor: pointer;
-        float: right;
-        width: 30px;
     }
 
     .movie {
-        display: flex;
         flex-direction: column;
-        width: 100%;
     }
 
     .description {
-        position: relative;
         width: 100%;
         font-size: 10px;
     }
@@ -83,19 +33,14 @@
     }
 
     .profile-container {
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        color: rgba(255, 255, 255, 0.8);
     }
 
     .left-side {
-        position: relative;
         align-items: center;
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: 1rem;
     }
 
     .left-side h2 {
@@ -123,7 +68,6 @@
         margin-left: 0;
         width: 50%;
         margin-right: 0;
-        display: flex;
         align-items: center;
     }
 
@@ -136,16 +80,8 @@
     .right-side button {
         margin-left: 0;
         margin-right: 0;
-        width: 100%;
         display: flex;
         justify-content: center;
-    }
-
-    .loging-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .loging-icon {
@@ -156,15 +92,11 @@
 
     .loging-icon img {
         width: 40%;
-        border-radius: 50% 50%;
-        align-items: center;
-        justify-content: center;
         margin: 0;
     }
 
     .loging-form {
         width: 80%;
-        display: flex;
         align-items: center;
     }
 
@@ -186,13 +118,6 @@
         font-size: 14px;
     }
 
-    .register-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     .register-icon {
         width: 100%;
         margin-left: 0;
@@ -201,24 +126,16 @@
 
     .register-icon img {
         width: 40%;
-        border-radius: 50% 50%;
-        align-items: center;
-        justify-content: center;
         margin: 0;
     }
 
     .register-form {
         width: 80%;
-        display: flex;
         align-items: center;
-
     }
 
     .register-form label {
-        margin-bottom: 1rem;
-        color: rgba(255, 255, 255, 0.8);
         padding-left: 0rem;
-
     }
 
     .register-form input {
