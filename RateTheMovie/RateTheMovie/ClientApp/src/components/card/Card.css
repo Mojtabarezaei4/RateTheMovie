@@ -155,8 +155,8 @@ p {
 
 .left-side {
     position: relative;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
@@ -186,8 +186,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 1rem;
-    padding-bottom: 1rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
 }
 
 .profile {
@@ -207,11 +207,167 @@ p {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.right-side button:focus {
+    outline: none;
+}
+
+.loging-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loging-icon {
+    position: relative;
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    border-radius: 50% 50%;
+    justify-content: center;
+}
+
+.loging-icon img {
+    width: 30%;
+    border-radius: 50% 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.loging-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+
+.loging-form label {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 1rem;
+
+}
+
+.loging-form input {
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    transition: .2s;
+    text-overflow: ellipsis;
+    padding-left: 1rem;
+
+}
+
+.loging-form input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px -5px;
+}
+
+.loging-form button {
+    height: 40px;
+    width: 100%;
+    align-content: center;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
     margin-bottom: 1rem;
     margin-right: 2rem;
     font-size: 20px;
 }
 
-.right-side button:focus {
+.loging-form button:focus {
+    outline: none;
+}
+
+.register-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-icon {
+    position: relative;
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    border-radius: 50% 50%;
+    justify-content: center;
+}
+
+.register-icon img {
+    width: 30%;
+    border-radius: 50% 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+
+.register-form label {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 1rem;
+
+}
+
+.register-form input {
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    transition: .2s;
+    text-overflow: ellipsis;
+    padding-left: 1rem;
+
+}
+
+.register-form input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px -5px;
+}
+
+.register-form button {
+    height: 45px;
+    width: 100%;
+    align-content: center;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.register-form button:focus {
     outline: none;
 }

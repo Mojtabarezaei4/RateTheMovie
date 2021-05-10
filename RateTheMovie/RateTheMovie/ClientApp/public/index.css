@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Rockford';
+    src: url('../public/font/RockfordSans-Light.otf');
+}
+
+* {
+    font-family: "Rockford";
+}
+
 body {
     background: linear-gradient(135deg, rgba(49, 49, 50, 1) 0%, rgba(22, 22, 24, 1) 100%);
 
