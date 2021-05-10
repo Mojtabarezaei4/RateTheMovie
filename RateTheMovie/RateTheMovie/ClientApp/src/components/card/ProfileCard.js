@@ -17,7 +17,7 @@ export default function ProfileCard({userName, userEmail, icon}) {
                 </form>
             </div>
             <div className="right-side">
-                <img className="card-icon" src={icon} />
+                <img className="card-icon profile" src={icon} />
                 <button>Save</button>
             </div>
       </div>
