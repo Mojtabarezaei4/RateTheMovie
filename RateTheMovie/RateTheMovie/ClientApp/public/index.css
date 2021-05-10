@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Rockford';
-    src: url('../public/font/RockfordSans-Light.otf');
+    font-family: "Rockford";
+    src: url("/font/RockfordSans-Light.otf");
 }
 
 * {
