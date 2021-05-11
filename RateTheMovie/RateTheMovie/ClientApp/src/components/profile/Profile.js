@@ -8,7 +8,7 @@ export class Profile extends Component {
 
   render () {
     return (
-      <div  className="profile-container">
+      <div className="card">
         <ProfileCard 
           userName="Amanediel"
           userEmail="Amanediel@gmail.com"

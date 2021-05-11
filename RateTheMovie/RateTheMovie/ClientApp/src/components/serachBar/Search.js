@@ -5,7 +5,7 @@ import "./Search.css"
 export default function Search() {
     return (
         <div className="search-bar-container">
-               <form>
+               <form className="search-form">
                 <input
                     className="search-input"
                     type="text"
