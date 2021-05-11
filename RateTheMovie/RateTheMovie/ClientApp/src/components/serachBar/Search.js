@@ -4,8 +4,17 @@ import "./Search.css"
 
 export default function Search() {
     return (
-        <div>
-            
+        <div className="search-bar-container">
+               <form>
+                <input
+                    className="search-input"
+                    type="text"
+                    name="search-input"
+                    placeholder="Search For a user"
+                    required
+                />
+                <button>Search</button>
+            </form>
         </div>
     )
 }

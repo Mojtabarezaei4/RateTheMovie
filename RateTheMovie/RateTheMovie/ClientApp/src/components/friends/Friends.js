@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import FriendsCard from '../card/FriendsCard'
+import Search from '../serachBar/Search';
 
 export class Friends extends Component {
   static displayName = Friends.name;
@@ -8,6 +9,7 @@ export class Friends extends Component {
   render () {
     return (
       <div className="card">
+        <Search />
         <FriendsCard
         icon="/images/userAvatar.png"
         userName="Amanediel"
