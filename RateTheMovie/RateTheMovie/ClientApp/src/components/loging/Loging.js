@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import Login from '../card/LogingCard';
 
-import "./Profile.css"
-
-export class Profile extends Component {
-    static displayName = Profile.name;
+export class Loging extends Component {
+    static displayName = Loging.name;
 
     render() {
         return (
             <div className="card">
                 <Login
+                  icon="/images/friendAdded.png"
                 />
             </div>
         );

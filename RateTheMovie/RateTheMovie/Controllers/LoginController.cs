@@ -32,16 +32,10 @@ namespace RateTheMovie.Controllers
         {
             SecurityService securityService = new SecurityService(); 
 
-            if (securityService.IsValid(userModel))
-            {
-                return Ok(userModel);
-            }
-            else
-            {
-                return BadRequest("Not able to authenticate!!!");
-            }
             var user = _dbContext.Users.FirstOrDefault(u => u.Email == userModel.UserEmail);
-            var result = await _userManager.CheckPasswordAsync(user, userModel.Password);
+            var result= await _userManager.CheckPasswordAsync(user, userModel.Password);
+
+            return Ok(userModel);
         }
     }
 }

@@ -5,6 +5,8 @@ import { Home } from './components/home/Home';
 import { Friends } from './components/friends/Friends';
 import { Movies } from './components/movies/Movies';
 import { Profile } from './components/profile/Profile';
+import { Loging } from './components/loging/Loging';
+import { Register } from './components/register/Register';
 
 import './custom.css'
 import './index.css';
@@ -19,6 +21,8 @@ export default class App extends Component {
         <Route path='/friends' component={Friends} />
         <Route path='/movies' component={Movies} />
         <Route path='/profile' component={Profile} />
+        <Route path='/login' component={Loging} />
+        <Route path='/register' component={Register} />
       </Layout>
     );
   }

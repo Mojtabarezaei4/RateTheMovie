@@ -32,11 +32,13 @@ namespace RateTheMovie
                 configuration.RootPath = "ClientApp/build";
             });
 
+            // Creating db each time the app starts
             services.AddDbContext<ApplicationDbContext>(c =>
             {
                 c.UseInMemoryDatabase("testing");
             });
 
+            // Creating a user and storing it
             services.AddIdentityCore<ApplicationIdentetyUser>().AddEntityFrameworkStores<ApplicationDbContext>();
         }
 
