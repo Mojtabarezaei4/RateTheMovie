@@ -16,17 +16,18 @@ namespace RateTheMovie.Controllers
         }
 
         // The login process
-        public IActionResult ProcessLogin(UserModel userModel)
+        [HttpPost]
+        public IActionResult ProcessLogin([FromBody]UserModel userModel)
         {
             SecurityService securityService = new SecurityService(); 
 
             if (securityService.IsValid(userModel))
             {
-                return View("Home", userModel);
+                return Ok(userModel);
             }
             else
             {
-                return View("Login");
+                return BadRequest("Not able to authenticate!!!");
             }
         }
     }
