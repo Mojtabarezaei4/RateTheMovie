@@ -1,9 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Identity;
+using RateTheMovie.Data;
+using RateTheMovie.Data.Models;
 
 namespace RateTheMovie
 {
@@ -27,6 +31,13 @@ namespace RateTheMovie
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddDbContext<ApplicationDbContext>(c =>
+            {
+                c.UseInMemoryDatabase("testing");
+            });
+
+            services.AddIdentityCore<ApplicationIdentetyUser>().AddEntityFrameworkStores<ApplicationDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
