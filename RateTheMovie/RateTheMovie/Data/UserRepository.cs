@@ -23,5 +23,16 @@ namespace RateTheMovie.Data
 
             return userModel;
         }
+
+        // Geting the user by email when it trys to login.
+        public UserModel GetByEmail(string email)
+        {
+            return _context.Users.FirstOrDefault(u => u.UserEmail == email);
+        }
+
+        public UserModel GetById(int id)
+        {
+            return _context.Users.FirstOrDefault(u => u.Id == id);
+        }
     }
 }

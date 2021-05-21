@@ -9,5 +9,7 @@ namespace RateTheMovie.Data
     public interface IUserRepository
     {
         public UserModel Create(UserModel userModel);
+        public UserModel GetByEmail(string email);
+        public UserModel GetById(int id);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace RateTheMovie.Models
@@ -11,6 +12,6 @@ namespace RateTheMovie.Models
 
         public string UserEmail { get; set; }
 
-        public string Password { get; set; }
+        [JsonIgnore] public string Password { get; set; }
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using RateTheMovie.Data;
 using RateTheMovie.Models;
+using RateTheMovie.Helpers;
 
 namespace RateTheMovie
 {
@@ -23,6 +24,9 @@ namespace RateTheMovie
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // For preventing the different port request from front end to the back end 
+            services.AddCors();
+
 
             services.AddControllersWithViews();
 
@@ -37,6 +41,8 @@ namespace RateTheMovie
 
             // Saying that IUserRepository is the type of UserRepository.
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<JwtService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +61,14 @@ namespace RateTheMovie
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+
+            // The options we need for sending the cookies to the front end.
+            app.UseCors(options => options 
+                .WithOrigins(new [] { "http://localhost:3000"}) // Specifing the origins that will access this endpoint; 3000 for React, 8080 for Vue, 4200 for Angular
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+            );
 
             app.UseEndpoints(endpoints =>
             {
