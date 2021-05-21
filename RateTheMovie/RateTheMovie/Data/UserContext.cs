@@ -14,5 +14,13 @@ namespace RateTheMovie.Data
         }
         
         public DbSet<UserModel> Users { set; get; }
+
+        // For make sure the email is uniqe.
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserModel>(entity =>
+            {
+                entity.HasIndex(e => e.UserEmail).IsUnique();}); 
+        }
     }
 }
