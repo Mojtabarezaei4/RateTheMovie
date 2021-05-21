@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RateTheMovie.Data;
+using RateTheMovie.DataTransfermObjects;
+using RateTheMovie.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +21,17 @@ namespace RateTheMovie.Controllers
 
         // The method and the endpoint.
         [HttpPost("register")]
-        public IActionResult Register()
+        public IActionResult Register(RegisterDto dto)
         {
-            return Ok("success");
+            // geting the variables from the form.
+            var userModel = new UserModel
+            {
+                UserEmail = dto.UserEmail,
+                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
+            };
+
+            // Creating a user and returning it.
+            return Created("success", _repository.Create(userModel));
         }
     }
 }
