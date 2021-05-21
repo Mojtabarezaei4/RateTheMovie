@@ -34,6 +34,9 @@ namespace RateTheMovie
 
             // Connection to the Db; the connectionString is in "appsettings.json"
             services.AddDbContext<UserContext>(opt => opt.UseMySQL(Configuration.GetConnectionString("Default")));
+
+            // Saying that IUserRepository is the type of UserRepository.
+            services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
