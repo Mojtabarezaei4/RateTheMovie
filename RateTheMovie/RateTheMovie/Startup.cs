@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using RateTheMovie.Data;
-using RateTheMovie.Data.Models;
+using RateTheMovie.Models;
 
 namespace RateTheMovie
 {
@@ -32,14 +32,8 @@ namespace RateTheMovie
                 configuration.RootPath = "ClientApp/build";
             });
 
-            // Creating db each time the app starts
-            services.AddDbContext<ApplicationDbContext>(c =>
-            {
-                c.UseInMemoryDatabase("testing");
-            });
-
-            // Creating a user and storing it
-            services.AddIdentityCore<ApplicationIdentetyUser>().AddEntityFrameworkStores<ApplicationDbContext>();
+            // Connection to the Db; the connectionString is in "appsettings.json"
+            services.AddDbContext<UserContext>(opt => opt.UseMySQL(Configuration.GetConnectionString("Default")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
