@@ -3,28 +3,33 @@ import { Link, Redirect, Route } from 'react-router-dom'
 
 import './Card.css'
 
-export default function LogingCard({icon}) {
+export default function LogingCard({icon}, setName) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [redirect, setRedirect] = useState(false)
 
     const submit = async (e) =>{
         e.preventDefault()
-        const respons = await fetch( /* concetion to the backend */ 'http://localhost:3000/api/login', {
+        const respons = await fetch( /* concetion to the backend/endpoint */ 'http://localhost:5000/api/login', {
             method:"POST",
             headers: {'Content-Type': 'application/json'},
             /* Getting coockies */
             credentials: 'include',
             body:JSON.stringify({
-                email,
-                password
+                userEmail:email,
+                password:password
             })
         })
+
+        const content = await respons.json()
+
         setRedirect(true)
+
+        setName = content.name
     }
 
     if(redirect){
-        return <Redirect to="/profile"/>
+        return <Redirect to="/user"/>
     }
 
     return (
@@ -56,7 +61,7 @@ export default function LogingCard({icon}) {
                     required
                 />
                 <button>Log In</button>
-                <Link className="link" to="/register">Already have an acount</Link>
+                <Link className="link" to="/register">Rgister</Link>
             </form>
         </div>
     )

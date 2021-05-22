@@ -40,7 +40,7 @@ export class NavMenu extends Component {
                   <NavLink tag={Link} id="nav-link" to="/movies">Movies</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} id="nav-link" to="/api/user">Profile</NavLink>
+                  <NavLink tag={Link} id="nav-link" to="/user">Profile</NavLink>
                 </NavItem>
               </ul>
             </Collapse>

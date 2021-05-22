@@ -7,26 +7,24 @@ export default function RegisterCard({icon}) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [passwordConfirm, setPasswordConfirm] = useState('')
     const [redirect, setRedirect] = useState(false)
 
     const submit = async (e) =>{
         e.preventDefault(); 
 
-        const respons = await fetch( /* concetion to the backend */ 'http://localhost:3000/api/register', {
-            method:"POST",
+        const respons = await fetch( /* concetion to the backend/endpoint */ 'http://localhost:5000/api/register', {
+            method:'POST',
             headers: {'Content-Type': 'application/json'},
             body:JSON.stringify({
-                name,
-                email,
-                password
+                name: name,
+                userEmail: email,
+                password: password
             })
         })
         setRedirect(true)
         const content = await respons.json()
 
         console.log(content)
-
     }
     
     if(redirect){
@@ -40,16 +38,15 @@ export default function RegisterCard({icon}) {
             </div>
             <form 
                 className="register-form"
-                action=""
                 onSubmit={submit}
             >
                 <label>Name</label>
                 <input 
                     type="text" 
-                    placeholder="E-mail"
+                    placeholder="Name"
                     autoComplete="off"
                     name="name"
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={e => setName(e.target.value)}
                     required
                     />
                 <label>E-mail</label>

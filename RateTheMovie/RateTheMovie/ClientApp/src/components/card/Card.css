@@ -378,12 +378,9 @@ p {
 }
 
 .link:hover,
-.link-post:hover {
+.link-post:hover,
+.logout:hover {
     text-decoration: none;
-}
-
-.logout button {
-    color: rgba(255, 255, 255, 0.8);
 }
 
 .link-post {
@@ -402,4 +399,25 @@ p {
 .link-post:focus {
     outline: none;
     box-shadow: 0px 0px 15px -5px;
+}
+
+.right-side-buttons {
+    width: 100%;
+}
+
+.logout {
+    text-align: center;
+    height: 35px;
+    width: 100%;
+    align-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 15px -5px;
+    font-size: 20px;
+}
+
+.logout:focus {
+    outline: none;
 }

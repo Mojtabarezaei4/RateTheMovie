@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useRef, useState, useEffect } from 'react'
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/home/Home';
@@ -11,19 +11,43 @@ import { Register } from './components/register/Register';
 import './custom.css'
 import './index.css';
 
-export default class App extends Component {
-  static displayName = App.name;
+export default function App () {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [redirect, setRedirect] = useState(false)
 
-  render () {
+  useEffect(() => {
+    (
+      async() => {
+          const respons = await fetch( /* concetion to the backend */ 'http://localhost:5000/api/user', {
+              method:"GET",
+              headers: {'Content-Type': 'application/json'},
+              /* Getting coockies */
+              credentials: 'include'
+          })
+          const content = await respons.json()
+          setName(content.name)
+          setEmail(content.userEmail)
+          setRedirect(true)
+      }
+    )();
+  })
+  
     return (
       <Layout>
         <Route exact path='/' component={Home} />
         <Route path='/friends' component={Friends} />
         <Route path='/movies' component={Movies} />
-        <Route path='/api/user' component={Profile} />
-        <Route path='/api/login' component={Loging} />
-        <Route path='/api/register' component={Register} />
+        <Route path='/user' component={
+          ()=><Profile userName={name} userEmail={email} setName={setName}/>
+          }
+          />
+        <Route path='/login' component={
+          ()=><Loging setName={setName}/>
+          }
+          />
+        <Route path='/register' component={Register} />
       </Layout>
     );
-  }
+  
 }

@@ -1,22 +1,18 @@
-import React, { Component } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import ProfileCard from '../card/ProfileCard';
 
 import "./Profile.css"
 
-export class Profile extends Component {
-  static displayName = Profile.name;
+export function Profile (props) {
 
-  render () {
-    
     return (
-      <div className="card">
-        <ProfileCard 
-          userName= "Amanediel"
-          userEmail="Amanediel@gmail.com"
-          icon="/images/userAvatar.png"
-        />
-      </div>
-    );
-  }
+    <div className="card">
+      <ProfileCard 
+        userName = {props.userName}
+        userEmail = {props.userEmail}
+        icon="/images/userAvatar.png"
+      />
+    </div>
+  );
+  
 }
