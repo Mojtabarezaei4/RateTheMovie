@@ -8,14 +8,14 @@ export default function ProfileCard({userName, userEmail, icon}) {
     useEffect(() => {
         (
             async() => {
-                const respons = await fetch( /* concetion to the backend */ 'http://localhost:3000/api/profile', {
+                const respons = await fetch( /* concetion to the backend */ 'http://localhost:3000/api/user', {
                     method:"POST",
                     headers: {'Content-Type': 'application/json'},
                     /* Getting coockies */
                     credentials: 'include'
                 })
                 const content = await respons.json()
-                setEmail(content.email)
+                setEmail(content.userEmail)
             }
         )();
     })
@@ -35,7 +35,10 @@ export default function ProfileCard({userName, userEmail, icon}) {
             </div>
             <div className="right-side">
                 <img className="card-icon profile" src={icon} />
-                <button>Save</button>
+                <div>
+                    <button>Save</button>
+                    <button className="logout" value="Logout">Logout</button>
+                </div>
             </div>
       </div>
     )

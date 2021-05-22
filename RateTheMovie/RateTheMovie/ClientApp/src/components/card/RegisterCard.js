@@ -1,17 +1,14 @@
 import React, { useRef, useState } from 'react'
-import { Redirect, Route } from 'react-router-dom'
+import { Link, Redirect, Route } from 'react-router-dom'
 
 import './Card.css'
 
 export default function RegisterCard({icon}) {
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirm, setPasswordConfirm] = useState('')
     const [redirect, setRedirect] = useState(false)
-
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
 
     const submit = async (e) =>{
         e.preventDefault(); 
@@ -20,9 +17,9 @@ export default function RegisterCard({icon}) {
             method:"POST",
             headers: {'Content-Type': 'application/json'},
             body:JSON.stringify({
+                name,
                 email,
-                password,
-                passwordConfirm
+                password
             })
         })
         setRedirect(true)
@@ -46,10 +43,18 @@ export default function RegisterCard({icon}) {
                 action=""
                 onSubmit={submit}
             >
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    placeholder="E-mail"
+                    autoComplete="off"
+                    name="name"
+                    onChange={e => setEmail(e.target.value)}
+                    required
+                    />
                 <label>E-mail</label>
                 <input 
                     type="email" 
-                    ref={emailRef}
                     placeholder="E-mail"
                     autoComplete="off"
                     name="email"
@@ -59,25 +64,14 @@ export default function RegisterCard({icon}) {
                 <label>Password</label>
                 <input 
                     type="password"
-                    ref={passwordRef}
                     placeholder="Password"
                     autoComplete="off"
                     name="password"
                     onChange={e => setPassword(e.target.value)}
                     required
                 />
-                <label>Repeat Password</label>
-                <input 
-                    type="password"
-                    ref={passwordConfirmRef}
-                    placeholder="Repeat Password"
-                    autoComplete="off"
-                    onChange={e => setPasswordConfirm(e.target.value)}
-                    name="passwordConfirm"
-                    required
-                />
                 <button type="submit">Register</button>
-                <button>Already have an acount</button>
+                <Link className="link" to="/login">Already have an acount</Link>
             </form>
         </div>
     )

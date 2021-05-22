@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import StarRating from "../starRating/StarRating"
 
@@ -29,12 +30,8 @@ export default function MovieCard({movieName,imageUrl}) {
                     name="description"
                     autoComplete="off"
                     />
-                    <button 
-                    type="submit" 
-                    onClick={
-                        post("body.description")
-                    }>
-                    Post</button>
+                    <Link className="link-post" to="/">Post</Link>
+
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Redirect, Route } from 'react-router-dom'
+import { Link, Redirect, Route } from 'react-router-dom'
 
 import './Card.css'
 
@@ -56,7 +56,7 @@ export default function LogingCard({icon}) {
                     required
                 />
                 <button>Log In</button>
-                <button>Register</button>
+                <Link className="link" to="/register">Already have an acount</Link>
             </form>
         </div>
     )
