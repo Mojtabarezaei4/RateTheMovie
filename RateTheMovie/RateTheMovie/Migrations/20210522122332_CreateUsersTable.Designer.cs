@@ -8,7 +8,7 @@ using RateTheMovie.Data;
 namespace RateTheMovie.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20210521115039_CreateUsersTable")]
+    [Migration("20210522122332_CreateUsersTable")]
     partial class CreateUsersTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,9 @@ namespace RateTheMovie.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
 
                     b.Property<string>("Password")
                         .HasColumnType("text");

@@ -13,6 +13,7 @@ namespace RateTheMovie.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
                     UserEmail = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true)
                 },

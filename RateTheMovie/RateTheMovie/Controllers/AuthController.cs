@@ -31,6 +31,7 @@ namespace RateTheMovie.Controllers
             // geting the variables from the form.
             var userModel = new UserModel
             {
+                Name = dto.Name,
                 UserEmail = dto.UserEmail,
                 Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
             };

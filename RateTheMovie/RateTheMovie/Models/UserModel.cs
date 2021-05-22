@@ -10,6 +10,8 @@ namespace RateTheMovie.Models
     {
         public int Id { get; set; }
 
+        public string Name { get; set; }
+
         public string UserEmail { get; set; }
 
         [JsonIgnore] public string Password { get; set; }

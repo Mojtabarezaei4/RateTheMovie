@@ -20,9 +20,9 @@ export default class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/friends' component={Friends} />
         <Route path='/movies' component={Movies} />
-        <Route path='/profile' component={Profile} />
-        <Route path='/login' component={Loging} />
-        <Route path='/register' component={Register} />
+        <Route path='/api/user' component={Profile} />
+        <Route path='/api/login' component={Loging} />
+        <Route path='/api/register' component={Register} />
       </Layout>
     );
   }
