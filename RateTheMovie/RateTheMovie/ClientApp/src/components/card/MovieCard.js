@@ -30,7 +30,7 @@ export default function MovieCard({movieName,imageUrl}) {
                     name="description"
                     autoComplete="off"
                     />
-                    <Link className="link-post" to="/">Post</Link>
+                    <Link className="link-post link-post-res" to="/">Post</Link>
 
                 </form>
             </div>

@@ -22,10 +22,9 @@ export default function LogingCard({icon}, setName) {
         })
 
         const content = await respons.json()
+        setName = content.name
 
         setRedirect(true)
-
-        setName = content.name
     }
 
     if(redirect){
