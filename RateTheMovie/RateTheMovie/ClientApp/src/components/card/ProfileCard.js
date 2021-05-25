@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react'
-import { Link, Redirect, Route } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, Route } from 'react-router-dom'
 
 import './Card.css'
 

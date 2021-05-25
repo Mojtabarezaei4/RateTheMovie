@@ -27,32 +27,32 @@ export class Friends extends Component {
         />
         <FriendsCard
         icon="/images/userAvatar.png"
-        userName="Amanediel"
+        userName="Bert"
         addIcon="/images/addFriend.png"
         />
         <FriendsCard
         icon="/images/userAvatar.png"
-        userName="Michell"
+        userName="Dorna"
         addIcon="/images/addFriend.png"
         />
         <FriendsCard
         icon="/images/userAvatar.png"
-        userName="Jack"
+        userName="Jeff"
         addIcon="/images/addFriend.png"
         />
         <FriendsCard
         icon="/images/userAvatar.png"
-        userName="Amanediel"
+        userName="John"
         addIcon="/images/addFriend.png"
         />
         <FriendsCard
         icon="/images/userAvatar.png"
-        userName="Michell"
+        userName="Ester"
         addIcon="/images/addFriend.png"
         />
         <FriendsCard
         icon="/images/userAvatar.png"
-        userName="Jack"
+        userName="Bosse"
         addIcon="/images/addFriend.png"
         />
       </div>
